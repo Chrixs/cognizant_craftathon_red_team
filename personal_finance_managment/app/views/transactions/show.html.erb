@@ -1,12 +1,34 @@
+require 'pry'
+
 <div class="container">
   <div id='insights-display'>
     <div>
       <% if !@transactions.empty? %>
-        <% @transactions.each do |f| %>
-          <% @total += f.amount %>
-        <%end%>
+      <% @transactions.each do |f| %>
+      <% @total += f.amount %>
+      <% if f.category == 'Groceries' %>
+      <% @groceries_total += f.amount %>
+      <%end%>
+      <% if f.category == 'Bills' %>
+      <% @bills_total += f.amount %>
+      <%end%>
+      <% if f.category == 'Transport' %>
+      <% @transport_total += f.amount %>
+      <%end%>
+      <% if f.category == 'Shopping' %>
+      <% @shopping_total += f.amount %>
+      <%end%>
+      <% if f.category == 'Eat & Drink Out' %>
+      <% @eat_and_drink_out_total += f.amount %>
+      <%end%>
+      <%end%>
       <%end%>
       <%= "Total: £#{@total}" %>
+      <%= "Groceries Total: £#{@groceries_total} " %>
+      <%= "Bills Total: £#{@bills_total} " %>
+      <%= "Transport Total: £#{@transport_total} " %>
+      <%= "Shopping Total: £#{@shopping_total} " %>
+      <%= "Eat & Drink Out Total: £#{@eat_and_drink_out_total} " %>
     </div>
   </div>
 </div>

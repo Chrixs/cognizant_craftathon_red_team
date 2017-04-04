@@ -15,5 +15,11 @@ feature 'insights' do
       visit '/transactions/show'
       expect(page).to have_content 'Total: £285.5'
     end
+
+    scenario 'should return Groceries total spent' do
+      add_transaction_history
+      visit '/transactions/show'
+      expect(page).to have_content 'Groceries Total: £55.0'
+    end
   end
 end

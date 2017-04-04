@@ -10,7 +10,7 @@
           <% @total += f.amount %>
         <%end%>
       <%end%>
-      <%= "Total: £#{@total}" %>
+      <%= "Total: #{number_to_currency(@total, :unit => "£")}" %>
     </div>
   </div>
 </div>

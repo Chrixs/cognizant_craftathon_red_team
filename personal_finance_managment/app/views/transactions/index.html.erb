@@ -15,7 +15,7 @@
               <%= f.company %>
             </td>
             <td>
-              <%= '£' + f.amount.to_s %>
+              <%= number_to_currency(f.amount.to_s, :unit => "£") %>
             </td>
             <td>
               <%= f.date %>

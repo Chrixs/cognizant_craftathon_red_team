@@ -8,10 +8,37 @@
 </head>
 <body>
   <div>
-    "No transactions yet"
+    <table style="width:100%">
+      <tr>
+        <th>Company</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Category</th>
+      </tr>
+      <% if !@transactions.empty? %>
+        <% @transactions.each do |f| %>
+          <tr align="center">
+            <td>
+              <%= f.company %>
+            </td>
+            <td>
+              <%= '£' + f.amount.to_s %>
+            </td>
+            <td>
+              <%= f.date %>
+            </td>
+            <td>
+              <%= f.category %>
+            </td>
+          </tr>
+        <% end %>
+      <% else %>
+        <h1>No Results Yet</h1>
+      <% end %>
+    </table>
   </div>
 
-  <%= yield %>
+
 
 </body>
 </html>

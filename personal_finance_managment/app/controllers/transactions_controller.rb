@@ -5,6 +5,8 @@ class TransactionsController < ApplicationController
   end
 
   def show
+    @transactions = Transaction.all
+    @total = 0.00
   end
 
 end

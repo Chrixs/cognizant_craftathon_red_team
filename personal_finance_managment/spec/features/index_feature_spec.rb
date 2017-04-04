@@ -11,5 +11,10 @@ feature 'transactions' do
       visit '/transactions'
       expect(page).to have_content 'No transactions yet'
     end
+    scenario 'link to insights' do
+      visit '/transactions'
+      click_link 'Insights'
+      expect(current_path).to eq '/transactions/insights'
+    end
   end
 end

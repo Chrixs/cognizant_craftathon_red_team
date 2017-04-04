@@ -7,33 +7,33 @@
 
     <div>
       <% if !@transactions.empty? %>
-      <% @transactions.each do |f| %>
-      <% @total += f.amount %>
-      <% if f.category == 'Groceries' %>
-      <% @groceries_total += f.amount %>
-      <%end%>
-      <% if f.category == 'Bills' %>
-      <% @bills_total += f.amount %>
-      <%end%>
-      <% if f.category == 'Transport' %>
-      <% @transport_total += f.amount %>
-      <%end%>
-      <% if f.category == 'Shopping' %>
-      <% @shopping_total += f.amount %>
-      <%end%>
-      <% if f.category == 'Eat & Drink Out' %>
-      <% @eat_and_drink_out_total += f.amount %>
-      <%end%>
-      <%end%>
+        <% @transactions.each do |f| %>
+          <% @total += f.amount %>
+          <% if f.category == 'Groceries' %>
+            <% @groceries_total += f.amount %>
+          <%end%>
+          <% if f.category == 'Bills' %>
+            <% @bills_total += f.amount %>
+          <%end%>
+          <% if f.category == 'Transport' %>
+            <% @transport_total += f.amount %>
+          <%end%>
+          <% if f.category == 'Shopping' %>
+            <% @shopping_total += f.amount %>
+          <%end%>
+          <% if f.category == 'Eat & Drink Out' %>
+            <% @eat_and_drink_out_total += f.amount %>
+          <%end%>
+        <%end%>
       <%end%>
     </div>
-      <ul>
-        <li> <%= "Total: #{number_to_currency(@total, :unit => "£")}" %> </li>
-        <li> <%= "Groceries Total: #{number_to_currency(@groceries_total, :unit => "£")}" %> </li>
-        <li> <%= "Bills Total: #{number_to_currency(@bills_total, :unit => "£")}" %> </li>
-        <li> <%= "Transport Total: #{number_to_currency(@transport_total, :unit => "£")}" %> </li>
-        <li> <%= "Shopping Total: #{number_to_currency(@shopping_total, :unit => "£")}" %> </li>
-        <li> <%= "Eat & Drink Out Total: #{number_to_currency(@eat_and_drink_out_total, :unit => "£")}" %> </li>
+    <ul>
+      <li> <%= "Total: #{number_to_currency(@total, :unit => "£")}" %> </li>
+      <li> <%= "Groceries Total: #{number_to_currency(@groceries_total, :unit => "£")}" %> </li>
+      <li> <%= "Bills Total: #{number_to_currency(@bills_total, :unit => "£")}" %> </li>
+      <li> <%= "Transport Total: #{number_to_currency(@transport_total, :unit => "£")}" %> </li>
+      <li> <%= "Shopping Total: #{number_to_currency(@shopping_total, :unit => "£")}" %> </li>
+      <li> <%= "Eat & Drink Out Total: #{number_to_currency(@eat_and_drink_out_total, :unit => "£")}" %> </li>
     </ul>
   </div>
 </div>

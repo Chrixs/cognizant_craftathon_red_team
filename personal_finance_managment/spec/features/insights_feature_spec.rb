@@ -21,5 +21,29 @@ feature 'insights' do
       visit '/transactions/show'
       expect(page).to have_content 'Groceries Total: £55.0'
     end
+
+    scenario 'should return Bills total spent' do
+      add_transaction_history
+      visit '/transactions/show'
+      expect(page).to have_content 'Bills Total: £42.5'
+    end
+
+    scenario 'should return Transport total spent' do
+      add_transaction_history
+      visit '/transactions/show'
+      expect(page).to have_content 'Transport Total: £35.0'
+    end
+
+    scenario 'should return Shopping total spent' do
+      add_transaction_history
+      visit '/transactions/show'
+      expect(page).to have_content 'Shopping Total: £64.0'
+    end
+
+    scenario 'should return Shopping total spent' do
+      add_transaction_history
+      visit '/transactions/show'
+      expect(page).to have_content 'Eat & Drink Out Total: £89.0'
+    end
   end
 end

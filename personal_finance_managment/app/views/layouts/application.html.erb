@@ -6,9 +6,28 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Martel:900" rel="stylesheet">
   </head>
 
   <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="glyphicon glyphicon-th-list icon-ok"></span>
+      </button>
+      <a class="navbar-brand" href="/">Team Red Bank</a>
+    </div>
+
+    <div id="navbar" class="navbar-collapse collapse">
+           <ul class="nav navbar-nav navbar-right">
+             <li class="active"><%= link_to "Insights", transactions_insights_path %><span class="sr-only">(current)</span></a></li>
+           </ul>
+         </div>
+
+  </div>
+</nav>
     <%= yield %>
   </body>
 </html>

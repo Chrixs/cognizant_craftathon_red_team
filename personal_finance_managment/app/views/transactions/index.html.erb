@@ -1,6 +1,7 @@
-  <div id='transaction-display'>
+  <div class="container">
+    <div id='transaction-display'>
     <h2>Transactions</h2>
-    <table style="width:100%">
+    <table>
       <tr>
         <th>Company</th>
         <th>Amount</th>
@@ -9,7 +10,7 @@
       </tr>
       <% if !@transactions.empty? %>
         <% @transactions.each do |f| %>
-          <tr align="center">
+          <tr>
             <td>
               <%= f.company %>
             </td>
@@ -29,3 +30,4 @@
       <% end %>
     </table>
   </div>
+</div>

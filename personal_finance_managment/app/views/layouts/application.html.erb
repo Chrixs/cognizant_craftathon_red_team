@@ -31,14 +31,13 @@
 </nav>
     <%= yield %>
     <script>
-
     var statusChanger = (function(){
        var statusColor = function() {
-         $(".category:contains('Bills')").attr("bgcolor", "red");
-         $(".category:contains('Transport')").attr("bgcolor", "yellow");
-         $(".category:contains('Groceries')").attr("bgcolor", "green");
-         $(".category:contains('Shopping')").attr("bgcolor", "green");
-         $(".category:contains('Eat')").attr("bgcolor", "green");
+         $(".category:contains('Bills')").attr("bgcolor", "#FFA7A9");
+         $(".category:contains('Transport')").attr("bgcolor", "#B48EE8");
+         $(".category:contains('Groceries')").attr("bgcolor", "#A9E1FF");
+         $(".category:contains('Shopping')").attr("bgcolor", "#8EE8A2");
+         $(".category:contains('Eat')").attr("bgcolor", "#FFFB9C");
      };
 
      return {
@@ -47,6 +46,7 @@
     }());
 
     statusChanger.color();
-</script>
+
+    </script>
   </body>
 </html>

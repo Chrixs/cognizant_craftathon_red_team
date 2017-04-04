@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$pink: #FFA7A9;
+$purple: #B48EE8;
+$blue: #A9E1FF;
+$green: #8EE8A2;
+$yellow: #FFFB9C;
+
 #transaction-display {
   margin-top: 75px;
 }
@@ -17,4 +23,8 @@ tr {
   border-style: solid;
   border-width: 1px;
   border-color: #444444;
+}
+
+th, td {
+  padding: 5px;
 }

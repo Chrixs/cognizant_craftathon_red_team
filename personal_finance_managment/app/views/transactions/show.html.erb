@@ -1,7 +1,10 @@
-require 'pry'
-
 <div class="container">
   <div id='insights-display'>
+    <%= form_for(:transaction, url: { action: "show" }, html: {method: :get}) do |f| %>
+    <%= f.date_field :date, name: 'date' %>
+    <%= f.submit "Filter by Date" %>
+    <% end %>
+
     <div>
       <% if !@transactions.empty? %>
       <% @transactions.each do |f| %>

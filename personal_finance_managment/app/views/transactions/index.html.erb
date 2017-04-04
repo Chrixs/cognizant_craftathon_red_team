@@ -1,33 +1,33 @@
-  <div class="container">
+<div class="container">
     <div id='transaction-display'>
-    <h2>Transactions</h2>
-    <table>
-      <tr>
-        <th>Company</th>
-        <th>Amount</th>
-        <th>Date</th>
-        <th>Category</th>
-      </tr>
-      <% if !@transactions.empty? %>
-        <% @transactions.each do |f| %>
-          <tr>
-            <td>
-              <%= f.company %>
-            </td>
-            <td>
-              <%= '£' + f.amount.to_s %>
-            </td>
-            <td>
-              <%= f.date %>
-            </td>
-            <td class='category'>
-              <%= f.category %>
-            </td>
-          </tr>
-        <% end %>
-      <% else %>
-        <h1>No Results Yet</h1>
-      <% end %>
-    </table>
-  </div>
+        <h2>Transactions</h2>
+        <table>
+            <tr>
+                <th>Company</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Category</th>
+            </tr>
+            <% if !@transactions.empty? %>
+                <% @transactions.each do |f| %>
+                    <tr>
+                        <td>
+                            <%= f.company %>
+                        </td>
+                        <td>
+                            <%= number_to_currency(f.amount.to_s, :unit => "£") %>
+                        </td>
+                        <td>
+                            <%= f.date %>
+                        </td>
+                        <td class='category'>
+                            <%= f.category %>
+                        </td>
+                    </tr>
+                <% end %>
+            <% else %>
+                <h1>No Results Yet</h1>
+            <% end %>
+        </table>
+    </div>
 </div>

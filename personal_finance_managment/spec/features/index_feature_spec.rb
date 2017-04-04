@@ -16,7 +16,7 @@ feature 'transactions' do
     scenario 'displays History of Transactions' do
       add_transaction_history
       visit'/transactions'
-      expect(page).to have_content 'British Gas £12.5 2017-04-03 Bills'
+      expect(page).to have_content 'British Gas £12.50 2017-04-03 Bills'
     end
     scenario 'link to insights' do
       visit '/transactions'

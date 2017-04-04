@@ -23,12 +23,14 @@ require 'pry'
       <%end%>
       <%end%>
       <%end%>
-      <%= "Total: £#{@total}" %>
-      <%= "Groceries Total: £#{@groceries_total} " %>
-      <%= "Bills Total: £#{@bills_total} " %>
-      <%= "Transport Total: £#{@transport_total} " %>
-      <%= "Shopping Total: £#{@shopping_total} " %>
-      <%= "Eat & Drink Out Total: £#{@eat_and_drink_out_total} " %>
     </div>
+      <ul>
+        <li> <%= "Total: £#{@total}" %> </li>
+        <li> <%= "Groceries Total: £#{@groceries_total}" %> </li>
+        <li> <%= "Bills Total: £#{@bills_total}" %> </li>
+        <li> <%= "Transport Total: £#{@transport_total}" %> </li>
+        <li> <%= "Shopping Total: £#{@shopping_total}" %> </li>
+        <li> <%= "Eat & Drink Out Total: £#{@eat_and_drink_out_total}" %> </li>
+    </ul>
   </div>
 </div>

@@ -1,11 +1,11 @@
 
 var statusChanger = (function(){
    var statusColor = function() {
-     $(".status:contains('Bills')").css("color", "red");
-     $(".status:contains('Transport')").css("color", "yellow");
-     $(".status:contains('Groceries')").css("color", "green");
-     $(".status:contains('Shopping')").css("color", "green");
-     $(".status:contains('Food and drink')").css("color", "green");
+     $(".category:contains('Bills')").attr("bg-color", "red");
+     $(".category:contains('Transport')").attr("bg-color", "yellow");
+     $(".category:contains('Groceries')").attr("bg-color", "green");
+     $(".category:contains('Shopping')").attr("bg-color", "green");
+     $(".category:contains('Food and drink')").attr("bg-color", "green");
  };
 
  return {

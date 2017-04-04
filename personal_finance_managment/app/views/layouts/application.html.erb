@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
     <link href="https://fonts.googleapis.com/css?family=Martel:900" rel="stylesheet">
   </head>
 
@@ -29,5 +30,23 @@
   </div>
 </nav>
     <%= yield %>
+    <script>
+
+    var statusChanger = (function(){
+       var statusColor = function() {
+         $(".category:contains('Bills')").attr("bgcolor", "red");
+         $(".category:contains('Transport')").attr("bgcolor", "yellow");
+         $(".category:contains('Groceries')").attr("bgcolor", "green");
+         $(".category:contains('Shopping')").attr("bgcolor", "green");
+         $(".category:contains('Eat')").attr("bgcolor", "green");
+     };
+
+     return {
+       color: statusColor
+     };
+    }());
+
+    statusChanger.color();
+</script>
   </body>
 </html>

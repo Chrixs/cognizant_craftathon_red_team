@@ -1,0 +1,8 @@
+<div>
+  <% if !@transactions.empty? %>
+    <% @transactions.each do |f| %>
+      <% @total += f.amount %>
+    <%end%>
+  <%end%>
+  <%= "Total: £#{@total}" %>
+</div>
